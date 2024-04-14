@@ -1,0 +1,65 @@
+﻿<Window x:Class="WpfApp2.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="Settings" Height="450" Width="900" Background="#FF9A0FFF">
+    <Window.Resources>
+        <ImageBrush x:Key="old_password" ImageSource="Sourve/old_password.png" AlignmentX="Left" Stretch="None" />
+        <ImageBrush x:Key="password" ImageSource="Sourve/password.png" AlignmentX="Left" Stretch="None" />
+        <ImageBrush x:Key="email" ImageSource="Sourve/email.png" AlignmentX="Left" Stretch="None" />
+    </Window.Resources>
+    <Grid>
+        <TextBox x:Name="email" Margin="83,41,576,345" Background="{StaticResource email}" TextChanged="OnEmailChange"/>
+        <TextBox x:Name="Show1" Margin="83,114,610,272" Visibility="Collapsed" Background="{StaticResource password}" TextChanged="OnPasswordChange"/>
+        <TextBox x:Name="Show2" Margin="563,42,130,344" Visibility="Collapsed" Background="{StaticResource old_password}" TextChanged="OnOldPasswordChange"/>
+        <TextBox Margin="563,128,130,258" Visibility="Collapsed" Background="{StaticResource password}" x:Name="Show3" TextChanged="OnPasswordChange"/>
+        <TextBox x:Name="Show4" Margin="563,228,130,158" Visibility="Collapsed" Background="{StaticResource password}" TextChanged="OnPasswordChange"/>
+        <PasswordBox x:Name="pass1" Margin="83,114,576,272" Background="{StaticResource password}" PasswordChanged="OnPasswordChange"/>
+        <PasswordBox x:Name="pass2" Margin="563,42,130,344" Background="{StaticResource old_password}" PasswordChanged="OnOldPasswordChange"/>
+        <PasswordBox x:Name="pass3" Margin="563,128,130,258" Background="{StaticResource password}" PasswordChanged="OnPasswordChange"/>
+        <PasswordBox x:Name="pass4" Margin="563,228,130,158" Background="{StaticResource password}" PasswordChanged="OnPasswordChange"/>
+        <Button x:Name="fgdd" Content="Сменить почту" Margin="78,204,605,185" Background="#FF0CC564" FontSize="24" Click="Email_Click"/>
+
+        <Button Content="Сменить пароль" Margin="553,322,130,67" Background="#FF0CC564" FontSize="24" Click="Password_Click"/>
+        
+
+        <Image Margin="0,54,827,356" Source="/Sourve/convert.png" Stretch="Fill"/>
+        <Image Margin="486,132,355,258" Source="/Sourve/зфыыцщкв.png" Stretch="Fill"/>
+
+        <Image Margin="486,44,355,346" Source="/Sourve/зфыыцщкв.png" Stretch="Fill"/>
+        <Image Margin="486,232,355,158" Source="/Sourve/зфыыцщкв.png" Stretch="Fill"/>
+        <Image Margin="7,118,834,272" Source="/Sourve/зфыыцщкв.png" Stretch="Fill"/>
+
+        <Button x:Name="Hide1" Margin="301,102,469,258" Background="{x:Null}" Click="Hide_Click1" >
+            <Image Height="64" Source="/Sourve/eye.png" Stretch="Fill" Width="75"/>
+        </Button>
+        <Button x:Name="Showpass1" Margin="301,102,469,258" Background="{x:Null}" Click="Hide_Click1" Visibility="Collapsed">
+            <Image Height="64" Source="/Sourve/eye2.png" Stretch="Fill" Width="75" />
+        </Button>
+
+        <Button x:Name="Hide2" Margin="766,42,22,324" Background="{x:Null}" Click="Hide_Click2">
+            <Image  Height="64" Source="/Sourve/eye.png" Stretch="Fill" Width="75"/>
+        </Button>
+        <Button x:Name="Showpass2" Margin="766,42,22,324" Background="{x:Null}" Click="Hide_Click2" Visibility="Collapsed">
+            <Image Height="64" Source="/Sourve/eye2.png" Stretch="Fill" Width="75" />
+        </Button>
+
+        <Button x:Name="Hide3" Margin="744,122,0,248" Background="{x:Null}" Click="Hide_Click3">
+            <Image  Height="64" Source="/Sourve/eye.png" Stretch="Fill" Width="75"/>
+        </Button>
+        <Button x:Name="Showpass3" Margin="744,122,0,248" Background="{x:Null}" Click="Hide_Click3" Visibility="Collapsed">
+            <Image  Height="64" Source="/Sourve/eye2.png" Stretch="Fill" Width="75" />
+        </Button>
+
+        <Button x:Name="Hide4" Margin="770,214,17,158" Background="{x:Null}" Click="Hide_Click4">
+            <Image  Height="64" Source="/Sourve/eye.png" Stretch="Fill" Width="75"/>
+        </Button>
+        <Button x:Name="Showpass4" Margin="770,214,17,158" Background="{x:Null}" Click="Hide_Click4" Visibility="Collapsed">
+            <Image  Height="64" Source="/Sourve/eye2.png" Stretch="Fill" Width="75" />
+        </Button>
+        <Label x:Name="Error" Foreground="#FFFD0404" Margin="7,362,329,10" />
+    </Grid>
+</Window>
